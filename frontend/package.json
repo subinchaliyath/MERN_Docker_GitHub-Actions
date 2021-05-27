@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "http://mern_api_1:5000",
+  "proxy": "http://subinchaliyath.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
