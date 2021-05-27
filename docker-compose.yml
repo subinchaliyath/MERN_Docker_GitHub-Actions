@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+    web:
+        build: ./frontend
+        ports: 
+            - 3000:3000
+    api:
+        build: ./backend
+        ports: 
+            - 5000:5000
+        environment: 
+            MONGO_URI: mongodb://db/digicart
+    db:
+        image: mongo:4.0-xenial
+        ports: 
+                - 27017:27017
+        volumes:
+            - digicart:/data/db/
+volumes:
+    digicart:
